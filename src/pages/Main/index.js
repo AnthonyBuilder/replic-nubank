@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 
 export default function Main() {
+  
   let offset = 0;
   const translateY = new Animated.Value(0);
 
@@ -62,8 +63,7 @@ export default function Main() {
         <Menu translateY={translateY}/>
         <PanGestureHandler
           onGestureEvent={animatedEvent}
-          onHandlerStateChange={onHandlerStateChange}
-        >
+          onHandlerStateChange={onHandlerStateChange}>
           <Card style={{
             transform: [{
               translateY: translateY.interpolate({
